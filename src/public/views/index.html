@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{config.name}}</title>
+    <link rel="shortcut icon" href="/yosemite-static/static/yosemite-icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="/yosemite-static/views/style.css"> <!-- Link to your custom stylesheet -->
+</head>
+
+<body class="">
+    <div class="absolute z-10 w-full">
+    <div class="header flex items-center" style="font-family: Fira Code;">
+    <div class=" flex items-center justify-between px-10 max-w-[900px] mx-auto">
+        
+        <div class="flex items-center gap-x-5">
+
+            <img src="/yosemite-static/static/yosemite-icon.png" width="50px" alt="" srcset="">
+            <h2>Yosemite API</h2>
+        </div>
+    </div>
+    </div>
+    <div class="wrap max-w-[900px] mx-auto pt-20 px-14">
+        
+        <h1 id="doc-title" class="text-4xl font-['Fira Code'] font-medium" style="font-family: Fira Code;">{{config.name}}</h1>
+        <p id="doc-description" class="text-sm py-5 opacity-70">{{config.description}}</p>
+        <div class="h-10"></div>
+        <input class="bg-[#303030] border-2 border-[#303030] rounded-[10px] px-3 py-2 bg-[#252525] placeholder:text-[#606060]   text-white text-sm"
+        type="search" name="" id="search" placeholder="Search Endpoint">
+        <div class="h-10"></div>
+        <div id="endpoints">
+            {{endpoints}}
+        </div>
+        
+        <div class="h-20"></div>
+        <div class="text-center py-10">
+            <p class="text-sm" style="font-family: Fira Code;">Made with ❤️ by <a rel="noopener"
+                href="https://github.com/jonace-mpelule" class="underline" target="_blank">Jonace Mpelule</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex justify-center items-center fixed bottom-0">
+        <img src="/yosemite-static/static/yosemite-background.png" class="opacity-10 w-full max-w-[900px]" alt="">
+
+    </div>
+        <script type="module" src="/yosemite-static/views/search.js"></script>
+        <script type="module" src="/yosemite-static/views/code-highlighter.js"></script>
+        <script type="module" src="/yosemite-static/views/clipboard.js"></script>
+        <script type="module" src="/yosemite-static/views/accordion.js"></script>
+    </body>
+
+</html>
